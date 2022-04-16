@@ -60,16 +60,16 @@ public class Robot {
     public void stepForward() {
         switch (direction) {
             case UP:
-                coordinateX++;
-                break;
-            case DOWN:
-                coordinateX--;
-                break;
-            case RIGHT:
                 coordinateY++;
                 break;
-            case LEFT:
+            case DOWN:
                 coordinateY--;
+                break;
+            case RIGHT:
+                coordinateX++;
+                break;
+            case LEFT:
+                coordinateX--;
                 break;
         }
     }
