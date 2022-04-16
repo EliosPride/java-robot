@@ -13,12 +13,10 @@ public class Robot {
 
     public Direction getDirection() {
         return direction;
-        // текущее направление взгляда
     }
 
     public int getCoordinateX() {
         return coordinateX;
-        // текущая координата X
     }
 
     public int getCoordinateY() {
@@ -27,32 +25,52 @@ public class Robot {
 
     public void turnLeft() {
         switch (direction) {
-            case UP: direction = Direction.LEFT;
-            case DOWN: direction = Direction.RIGHT;
-            case LEFT: direction = Direction.DOWN;
-            case RIGHT: direction = Direction.UP;
+            case UP:
+                direction = Direction.LEFT;
+                break;
+            case DOWN:
+                direction = Direction.RIGHT;
+                break;
+            case LEFT:
+                direction = Direction.DOWN;
+                break;
+            case RIGHT:
+                direction = Direction.UP;
+                break;
         }
-        // повернуться на 90 градусов против часовой стрелки
     }
 
     public void turnRight() {
         switch (direction) {
-            case UP: direction = Direction.RIGHT;
-            case DOWN: direction = Direction.LEFT;
-            case LEFT: direction = Direction.UP;
-            case RIGHT: direction = Direction.DOWN;
+            case UP:
+                direction = Direction.RIGHT;
+                break;
+            case DOWN:
+                direction = Direction.LEFT;
+                break;
+            case LEFT:
+                direction = Direction.UP;
+                break;
+            case RIGHT:
+                direction = Direction.DOWN;
+                break;
         }
-        // повернуться на 90 градусов по часовой стрелке
     }
 
     public void stepForward() {
         switch (direction) {
-            case UP: coordinateX += 1;
-            case DOWN: coordinateX -= 1;
-            case RIGHT: coordinateY += 1;
-            case LEFT: coordinateY -= 1;
+            case UP:
+                coordinateX++;
+                break;
+            case DOWN:
+                coordinateX--;
+                break;
+            case RIGHT:
+                coordinateY++;
+                break;
+            case LEFT:
+                coordinateY--;
+                break;
         }
-        // шаг в направлении взгляда
-        // за один шаг робот изменяет одну свою координату на единицу
     }
 }
