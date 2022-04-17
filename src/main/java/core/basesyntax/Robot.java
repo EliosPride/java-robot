@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Robot {
+
     private Direction direction;
     private int coordinateX;
     private int coordinateY;
@@ -21,6 +22,15 @@ public class Robot {
 
     public int getCoordinateY() {
         return coordinateY;
+    }
+
+    @Override
+    public String toString() {
+        return "Robot{" +
+                "direction=" + direction +
+                ", coordinateX=" + coordinateX +
+                ", coordinateY=" + coordinateY +
+                '}';
     }
 
     public void turnLeft() {
