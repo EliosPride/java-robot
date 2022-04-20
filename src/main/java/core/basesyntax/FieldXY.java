@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class FieldXY {
 
-
     public void moveRobot(Robot robot, int coordinateX, int coordinateY) {
         Direction moveDirectionX = robot.getCoordinateX() > coordinateX ? Direction.LEFT : Direction.RIGHT;
         while (moveDirectionX != robot.getDirection()) {
