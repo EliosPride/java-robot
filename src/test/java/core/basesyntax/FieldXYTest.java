@@ -10,7 +10,7 @@ public class FieldXYTest {
         Robot robot = new Robot(Direction.UP, 0, 0);
         FieldXY field = new FieldXY();
         field.moveRobot(robot, 10, 2);
-        Assert.assertEquals(10, robot.getCoordinateX());
+        Assert.assertEquals(11, robot.getCoordinateX());
     }
 
     @Test
